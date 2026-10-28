@@ -1,0 +1,87 @@
+// Design tokens: single source of truth.
+// Each map is emitted as CSS custom properties in _root.scss.
+// In component styles use the custom properties (var(--color-text)); only
+// breakpoints are consumed as Sass values, because custom properties cannot
+// be used inside media queries.
+//
+// TODO(XD): every value in this file is a PLACEHOLDER. Replace from the XD file.
+
+// TODO(XD): brand colours, neutrals, feedback colours.
+$colors: (
+  'text': #1a1a1a,
+  'text-muted': #595959,
+  'background': #ffffff,
+  'surface': #f5f5f5,
+  'border': #d4d4d4,
+  'primary': #1a1a1a,
+  'primary-contrast': #ffffff,
+  'accent': #0b5fff,
+  'focus': #0b5fff,
+);
+
+// TODO(XD): font families (and load them in src/app/layout.tsx if web fonts).
+$font-families: (
+  'body': (
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif,
+  ),
+  'heading': (
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif,
+  ),
+);
+
+// TODO(XD): type scale (sizes, weights, line heights).
+$font-sizes: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'md': 1rem,
+  'lg': 1.25rem,
+  'xl': 1.5rem,
+  '2xl': 2rem,
+  '3xl': 3rem,
+);
+
+$font-weights: (
+  'regular': 400,
+  'bold': 700,
+);
+
+$line-heights: (
+  'tight': 1.2,
+  'base': 1.5,
+);
+
+// TODO(XD): spacing scale.
+$spacing: (
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
+  '4': 1rem,
+  '6': 1.5rem,
+  '8': 2rem,
+  '12': 3rem,
+  '16': 4rem,
+);
+
+// TODO(XD): radii.
+$radii: (
+  'sm': 0.25rem,
+  'md': 0.5rem,
+  'pill': 999px,
+);
+
+// TODO(XD): breakpoints (mobile-first, min-width) and max content width.
+$breakpoints: (
+  'sm': 600px,
+  'md': 900px,
+  'lg': 1200px,
+);
+
+$container-max-width: 75rem; // TODO(XD)

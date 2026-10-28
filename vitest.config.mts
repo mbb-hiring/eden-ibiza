@@ -13,4 +13,9 @@ export default defineConfig({
     setupFiles: ['./vitest.setup.ts'],
     css: { modules: { classNameStrategy: 'non-scoped' } },
   },
+  css: {
+    preprocessorOptions: {
+      scss: { loadPaths: [resolve(import.meta.dirname, 'src/styles')] },
+    },
+  },
 });

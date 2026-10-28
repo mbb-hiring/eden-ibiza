@@ -1,0 +1,4 @@
+// Global entry point. Only reset, custom properties and page-level rules live
+// here; everything else is a co-located CSS Module.
+@use 'root';
+@use 'reset';

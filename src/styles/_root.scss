@@ -1,0 +1,23 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'tokens';
+
+// Emits every token map as a CSS custom property on :root.
+@mixin emit($prefix, $map) {
+  @each $name, $value in $map {
+    --#{$prefix}-#{$name}: #{$value};
+  }
+}
+
+:root {
+  @include emit('color', tokens.$colors);
+  @include emit('font-size', tokens.$font-sizes);
+  @include emit('font-weight', tokens.$font-weights);
+  @include emit('line-height', tokens.$line-heights);
+  @include emit('space', tokens.$spacing);
+  @include emit('radius', tokens.$radii);
+
+  --font-body: #{list.join((), map.get(tokens.$font-families, 'body'), comma)};
+  --font-heading: #{list.join((), map.get(tokens.$font-families, 'heading'), comma)};
+  --container-max-width: #{tokens.$container-max-width};
+}
