@@ -1,0 +1,81 @@
+@use 'mixins';
+
+.header {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-background);
+}
+
+.inner {
+  @include mixins.container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.toggle {
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+
+  @include mixins.breakpoint-up('md') {
+    display: none;
+  }
+}
+
+.nav {
+  flex-basis: 100%;
+
+  // Collapsed on small screens until the toggle opens it.
+  &[data-open='false'] {
+    display: none;
+  }
+
+  @include mixins.breakpoint-up('md') {
+    flex-basis: auto;
+
+    &[data-open='false'] {
+      display: block;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 0;
+
+  @include mixins.breakpoint-up('md') {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+}
+
+.link {
+  display: inline-block;
+  padding-block: var(--space-3);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &[aria-current='page'] {
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
+    text-underline-offset: 0.35em;
+  }
+}
