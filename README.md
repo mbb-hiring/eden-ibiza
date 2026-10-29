@@ -74,4 +74,4 @@ description. You should be able to explain every line you submit.
 
 ## Questions
 
-Contact TODO: name / email. We respond within TODO: X hours.
+Contact [Jess Rezac (jrezac@mbbagency.com)](mailto:jrezac@mbbagency.com).
