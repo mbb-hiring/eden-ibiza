@@ -8,31 +8,31 @@
 
 // TODO(XD): brand colours, neutrals, feedback colours.
 $colors: (
-  'text': #1a1a1a,
+  'text': #000000,
   'text-muted': #595959,
   'background': #ffffff,
-  'surface': #f5f5f5,
-  'border': #d4d4d4,
-  'primary': #1a1a1a,
+  'surface': #00000029,
+  'border': #bbc47d,
+  'primary': #000000,
   'primary-contrast': #ffffff,
-  'accent': #0b5fff,
-  'focus': #0b5fff,
+  'secondary': #2d6064,
+  'tertiary': #3597a9,
+  'accent': #2d6064,
+  'focus': #3597a9,
+  'focus-on-dark': #bbc47d, // rings on dark backgrounds (e.g. footer)
 );
 
-// TODO(XD): font families (and load them in src/app/layout.tsx if web fonts).
 $font-families: (
   'body': (
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    sans-serif,
+    Urbanist,
+    Urbanist Fallback,
   ),
   'heading': (
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
+    'pt-sans-narrow',
+    sans-serif,
+  ),
+  'display': (
+    'above-the-beyond',
     sans-serif,
   ),
 );
@@ -84,4 +84,4 @@ $breakpoints: (
   'lg': 1200px,
 );
 
-$container-max-width: 75rem; // TODO(XD)
+$container-max-width: 1775px;

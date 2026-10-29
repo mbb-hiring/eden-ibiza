@@ -31,6 +31,15 @@ npm ci && npm run dev
 
 Then open http://localhost:3000.
 
+## Fonts
+
+Heading and display fonts (`pt-sans-narrow`, `above-the-beyond`) come from an
+Adobe Fonts (Typekit) kit, loaded with a stylesheet `<link>` in
+`src/app/layout.tsx`. That is a third-party request, so those fonts need an
+internet connection and fall back to the system sans-serif when offline. The
+body font, Urbanist, is loaded through `next/font/google`. The font stacks are
+defined in `src/styles/_tokens.scss`.
+
 ## Scripts
 
 | Script          | What it does                         |
@@ -42,10 +51,21 @@ Then open http://localhost:3000.
 
 ## Submitting
 
-1. Create a branch off `main` (for example `your-name/hero`). Do not commit
+1. Click **Use this template** → **Create a new repository** at the top of this
+   repo. Set it to **Private** and create it under your own GitHub account.
+   Clone that copy (not this one).
+2. In your new repo, go to **Settings → Collaborators** and add
+   **mbbdevelop** so we can review your work.
+3. Create a branch off `main` (for example `your-name/hero`). Do not commit
    directly to `main`.
-2. Commit as you go with clear messages.
-3. Open a pull request against TODO: repo / process, and fill in the PR template.
+4. Commit as you go with clear messages.
+5. Open a pull request from your branch into `main` **in your own repo**, fill
+   in the PR template, and request a review from **mbbdevelop**. Leave
+   the PR open; please don't merge it.
+6. Email the PR link to **jrezac@mbbagency.com** so we know you're done.
+
+Your repo stays private, and we won't share or reuse your work. Once the
+process wraps up, we'll let you know you're free to delete it.
 
 ## AI tools
 

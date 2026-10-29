@@ -19,5 +19,6 @@
 
   --font-body: #{list.join((), map.get(tokens.$font-families, 'body'), comma)};
   --font-heading: #{list.join((), map.get(tokens.$font-families, 'heading'), comma)};
+  --font-display: #{list.join((), map.get(tokens.$font-families, 'display'), comma)};
   --container-max-width: #{tokens.$container-max-width};
 }

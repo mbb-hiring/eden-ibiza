@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { Header } from './Header';
 
 vi.mock('next/navigation', () => ({
-  usePathname: () => '/shop',
+  usePathname: () => '/about',
 }));
 
 describe('Header', () => {
@@ -17,11 +17,11 @@ describe('Header', () => {
   it('marks the link for the current page', () => {
     render(<Header />);
 
-    expect(screen.getByRole('link', { name: 'Shop' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
       'aria-current',
       'page',
     );
-    expect(screen.getByRole('link', { name: 'About' })).not.toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Contact' })).not.toHaveAttribute(
       'aria-current',
     );
   });

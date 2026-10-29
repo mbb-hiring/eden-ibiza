@@ -3,7 +3,11 @@
 .footer {
   margin-top: var(--space-16);
   border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
+  background: var(--color-accent);
+  color: var(--color-primary-contrast);
+
+  // The default focus colour is too faint on this dark background.
+  --color-focus: var(--color-focus-on-dark);
 }
 
 .inner {
@@ -39,5 +43,4 @@
 
 .legal {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
 }
